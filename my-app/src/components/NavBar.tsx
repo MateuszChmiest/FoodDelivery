@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/logo.png"
+import logo from "./logo.png"
 import { BsFillCartFill } from "react-icons/bs";
 import clsx from "clsx";
 import { useCartContext } from "../context/CartContext";
@@ -12,7 +12,7 @@ const NavBar = () => {
 	const [navBackground, setNavBackground] = useState<boolean>(false);
 	const navRef = useRef<boolean>();
 	navRef.current = navBackground;
-	const { cartQuantity } = useCartContext();
+	const { cartQuantity, openCart } = useCartContext();
 
 	const quantity = cartQuantity;
 
@@ -55,7 +55,7 @@ const NavBar = () => {
 								About Us
 							</Link>
 						</div>
-						<button className='nav__checkout'>
+						<button className='nav__checkout' onClick={openCart}>
 							<BsFillCartFill color='#AA3328' size='1.25em' />
 							{quantity === 0 ? null : (
 								<div className='nav__checkout--counter'>{quantity}</div>
