@@ -1,0 +1,97 @@
+.nav {
+	height: $nav-height;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	top: 1.5rem;
+	z-index: 10;
+    transition: all 200ms;
+
+	&__active {
+		background-color: $color-primary;
+        -webkit-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+        -moz-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+        box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+		height: 4rem;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		width: 90px;
+		cursor: pointer;
+	}
+
+	&__menu {
+		display: flex;
+
+		&--link {
+			list-style: none;
+			cursor: pointer;
+			text-decoration: none;
+			color: black;
+			transition: 200ms;
+			font-weight: 600;
+
+			&:hover {
+				color: $color-secondary;
+			}
+		}
+
+		&--link:nth-of-type(2) {
+			padding: 0 2rem 0 2rem;
+		}
+	}
+
+	&__checkout {
+		width: 3rem;
+		height: 3rem;
+		border-radius: 1.5rem;
+		background-color: transparent;
+		border: 2px solid $color-secondary;
+		transition: all 300ms;
+		position: relative;
+
+		&:hover {
+			transform: scale(1.1);
+			background-color: $color-primary;
+		}
+
+		&--counter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			color: $color-black;
+			border: 1px solid $color-secondary;
+			background-color: $color-white;
+			border-radius: 1.5rem;
+			width: 1.5rem;
+			height: 1.5rem;
+			bottom: 0;
+			right: 0;
+			transform: translate(15%, 25%);
+		}
+	}
+}
+
+.contactNav {
+	position: fixed;
+	top: 0;
+	height: 1.5rem;
+	width: 100%;
+	background-color: $color-secondary;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	p {
+		color: $color-white;
+	}
+}
+

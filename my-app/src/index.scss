@@ -1,0 +1,13 @@
+//* Reset
+@import "./styles/reset";
+
+//* Settings
+@import "./styles/configuration/settings";
+@import "./styles//configuration/mixins";
+
+//* Components
+@import "./styles/navbar";
+@import "./styles/home";
+@import "./styles/about";
+@import "./styles/store";
+@import "./styles/footer";

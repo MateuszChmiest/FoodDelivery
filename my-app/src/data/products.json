@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Classic Burger",
+        "price": 9.99,
+        "imgUrl": "/assets/classic.jpg"
+    },
+    {
+        "id": 2,
+        "name": "American Burger",
+        "price": 11.99,
+        "imgUrl": "/assets/american.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Farmer Burger",
+        "price": 10.99,
+        "imgUrl": "/assets/farmer.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Maestro Burger",
+        "price": 11.49,
+        "imgUrl": "/assets/maestro.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Maestro and fries",
+        "price": 14.99,
+        "imgUrl": "/assets/maestrofries.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Classic and fries",
+        "price": 13.99,
+        "imgUrl": "/assets/classicfries.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Chicken Kebab",
+        "price": 9.99,
+        "imgUrl": "/assets/chickenkebab.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Fries",
+        "price": 3.99,
+        "imgUrl": "/assets/fries.jpg"
+    }
+]
