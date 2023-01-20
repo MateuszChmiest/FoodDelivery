@@ -1,0 +1,22 @@
+.cartImg {
+    width: 120px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.cartPrice {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.cartInfo {
+    font-size: 0.9rem;
+    &__quantity {
+        font-size: 0.85rem;
+    }
+}
+
+.cartEmpty {
+    text-align: center;
+    margin-top: 2rem;
+}
