@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "./logo.png"
+import logo from "./logo.png";
 import { BsFillCartFill } from "react-icons/bs";
+import { FaHamburger } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 import clsx from "clsx";
 import { useCartContext } from "../context/CartContext";
 
@@ -55,12 +57,36 @@ const NavBar = () => {
 								About Us
 							</Link>
 						</div>
-						<button className='nav__checkout' onClick={openCart}>
-							<BsFillCartFill color='#AA3328' size='1.25em' />
-							{quantity === 0 ? null : (
-								<div className='nav__checkout--counter'>{quantity}</div>
-							)}
-						</button>
+
+						<div
+							className={clsx("nav__mobileMenu", {
+								"nav__mobileMenu--active": nav,
+							})}>
+							<button className="nav__mobileMenu--close" onClick={() => setNav(!nav)}><AiOutlineClose size="1.25em"/></button>
+							<Link to={"/"} className='nav__mobileMenu--link'>
+								Home
+							</Link>
+							<Link to={"/store"} className='nav__mobileMenu--link'>
+								Store
+							</Link>
+							<Link to={"/about"} className='nav__mobileMenu--link'>
+								About Us
+							</Link>
+						</div>
+
+						<div>
+							<button className='nav__checkout' onClick={openCart}>
+								<BsFillCartFill size='1.25em' />
+								{quantity === 0 ? null : (
+									<div className='nav__checkout--counter'>{quantity}</div>
+								)}
+							</button>
+							<button
+								className={clsx("nav__burger", { "nav__burger--active": nav })}
+								onClick={() => setNav(!nav)}>
+								<FaHamburger size='1.25em' />
+							</button>
+						</div>
 					</div>
 				</Container>
 			</div>

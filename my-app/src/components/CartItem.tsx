@@ -14,6 +14,7 @@ const CartItems = ({ id, quantity }: CartItemsProps) => {
 		<Stack direction='horizontal' gap={2} className='d-flex align-items-center justify-content-between'>
 			<img
 				src={cartItem.imgUrl}
+				alt={cartItem.name}
 				className="cartImg"
 			/>
 			<div>

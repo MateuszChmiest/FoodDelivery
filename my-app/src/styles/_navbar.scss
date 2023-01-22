@@ -6,13 +6,13 @@
 	position: fixed;
 	top: 1.5rem;
 	z-index: 10;
-    transition: all 200ms;
+	transition: all 200ms;
 
 	&__active {
 		background-color: $color-primary;
-        -webkit-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
-        -moz-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
-        box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+		-webkit-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+		-moz-box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
+		box-shadow: 0px 0px 8px 2px rgba(134, 135, 146, 1);
 		height: 4rem;
 	}
 
@@ -28,7 +28,43 @@
 	}
 
 	&__menu {
+		display: none;
+
+		@include medium {
+			display: flex;
+
+			&--link {
+				list-style: none;
+				cursor: pointer;
+				text-decoration: none;
+				color: black;
+				transition: 200ms;
+				font-weight: 600;
+
+				&:hover {
+					color: $color-secondary;
+				}
+			}
+
+			&--link:nth-of-type(2) {
+				padding: 0 2rem 0 2rem;
+			}
+		}
+	}
+
+	&__mobileMenu {
 		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: -150%;
+		background-color: $color-primary;
+		z-index: 3;
+		transition: all 300ms;
 
 		&--link {
 			list-style: none;
@@ -37,6 +73,7 @@
 			color: black;
 			transition: 200ms;
 			font-weight: 600;
+			font-size: 2.25rem;
 
 			&:hover {
 				color: $color-secondary;
@@ -44,7 +81,48 @@
 		}
 
 		&--link:nth-of-type(2) {
-			padding: 0 2rem 0 2rem;
+			padding: 2rem 0 2rem 0;
+		}
+
+		&--active {
+			left: 0;
+		}
+
+		&--close {
+			position: absolute;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 1.5rem;
+			background-color: transparent;
+			border: 2px solid $color-secondary;
+			top: 0.5rem;
+			right: 0.5rem;
+		}
+
+		@include medium {
+			display: none;
+		}
+	}
+
+	&__burger {
+		background-color: transparent;
+		width: 3rem;
+		height: 3rem;
+		border-radius: 1.5rem;
+		margin-left: 0.25rem;
+		border: 2px solid $color-secondary;
+		transition: all 300ms;
+
+		&--active {
+			transform: rotate(90deg);
+		}
+
+		&:hover {
+			background-color: $color-primary;
+		}
+
+		@include medium {
+			display: none;
 		}
 	}
 
@@ -89,9 +167,9 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	z-index: 0;
 
 	p {
 		color: $color-white;
 	}
 }
-
