@@ -34,7 +34,7 @@ const NavBar = () => {
 
 	return (
 		<>
-			<div className={clsx("nav", { nav__active: navBackground })}>
+			<div className={clsx("nav", { 'nav__active': navBackground })}>
 				<div className='contactNav'>
 					<p>Telephone Orders +1 484 1234567</p>
 				</div>

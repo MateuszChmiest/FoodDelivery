@@ -1,5 +1,34 @@
 .home {
     width: 100%;
     height: 100vh;
-    margin-top: calc(4rem + $nav-height);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    &__banner {
+        width: 100%;
+        height: 100vh;
+        background-image: url("../assets/banner.jpg");
+        background-size: cover;
+        object-fit: cover;
+        background-position: 70% 0;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: black;
+            opacity: 0.3;
+
+        }
+
+        @include medium {
+            background-position: 90% 45%;
+        }
+    }
 }
