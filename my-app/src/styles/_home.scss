@@ -6,21 +6,26 @@
 
 	&__banner {
 		width: 100%;
-		height: 200px;
+		height: 250px;
 		background-image: url("../assets/banner.jpeg");
 		background-size: cover;
 		background-position: center;
 		margin-top: 5.5rem;
 		box-sizing: content-box;
-		scale: 1.1;
 		margin-bottom: 1rem;
 		position: relative;
+        -webkit-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
+        -moz-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
+        box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
 
 		@include medium {
-			height: 400px;
+			height: 300px;
 			background-position: bottom;
-			scale: 1;
 		}
+
+        @include large {
+            height: 400px;
+        }
 
 		// &::after {
 		//     content: "";
@@ -42,17 +47,24 @@
 		left: 0;
 
 		h1 {
+            color: $color-secondary;
             font-size: 1.25rem;
 			font-weight: 600;
+
 			@include large {
 				font-size: 2.15rem;
 			}
 		}
 
 		p {
-            font-size: 1rem;
+            color: $color-gray;
+            font-size: 0.75rem;
 			font-weight: 100;
             margin: 0.5rem 0 0.5rem 0;
+
+            @include medium {
+                font-size: 1rem;
+            }
 
 			@include large {
 				font-size: 1.35rem;
@@ -62,6 +74,15 @@
 	}
 
     &__btn {
-        float: right;
+        font-size: 0.55rem;
+
+        @include medium {
+            font-size: 0.75rem;
+            float: right;
+        }
+
+        @include large {
+            font-size: 1.15rem;
+        }
     }
 }

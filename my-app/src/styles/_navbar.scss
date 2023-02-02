@@ -24,7 +24,7 @@
 	}
 
 	&__logo {
-		width: 90px;
+		width: 58px;
 		cursor: pointer;
 	}
 
@@ -89,6 +89,12 @@
 			left: 0;
 		}
 
+		&--logo { 
+			position: absolute;
+			bottom: 3rem;
+			width: 80px;
+		}
+
 		&--close {
 			position: absolute;
 			width: 3rem;
@@ -96,8 +102,8 @@
 			border-radius: 1.5rem;
 			background-color: transparent;
 			border: 2px solid $color-secondary;
-			top: 0.5rem;
-			right: 0.5rem;
+			top: 0.9rem;
+			right: 0.75rem;
 		}
 
 		@include medium {
@@ -107,6 +113,7 @@
 
 	&__burger {
 		background-color: transparent;
+		text-align: center;
 		width: 3rem;
 		height: 3rem;
 		border-radius: 1.5rem;
@@ -132,6 +139,7 @@
 		height: 3rem;
 		border-radius: 1.5rem;
 		background-color: transparent;
+		text-align: center;
 		border: 2px solid $color-secondary;
 		transition: all 300ms;
 		position: relative;

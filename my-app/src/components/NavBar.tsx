@@ -20,7 +20,7 @@ const NavBar = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const show = window.scrollY > window.innerHeight / 9;
+			const show = window.scrollY > window.innerHeight / 16;
 
 			if (navRef.current !== show) {
 				setNavBackground(show);
@@ -72,6 +72,7 @@ const NavBar = () => {
 							<Link to={"/about"} className='nav__mobileMenu--link'>
 								About Us
 							</Link>
+							<img src={logo} alt="logo" className="nav__mobileMenu--logo"/>
 						</div>
 
 						<div>
