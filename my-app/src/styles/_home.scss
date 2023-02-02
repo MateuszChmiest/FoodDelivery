@@ -1,34 +1,67 @@
 .home {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
 
-    &__banner {
-        width: 100%;
-        height: 100vh;
-        background-image: url("../assets/banner.jpg");
-        background-size: cover;
-        object-fit: cover;
-        background-position: 70% 0;
-        background-repeat: no-repeat;
-        position: relative;
+	&__banner {
+		width: 100%;
+		height: 200px;
+		background-image: url("../assets/banner.jpeg");
+		background-size: cover;
+		background-position: center;
+		margin-top: 5.5rem;
+		box-sizing: content-box;
+		scale: 1.1;
+		margin-bottom: 1rem;
+		position: relative;
 
-        &::after {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background-color: black;
-            opacity: 0.3;
+		@include medium {
+			height: 400px;
+			background-position: bottom;
+			scale: 1;
+		}
 
-        }
+		// &::after {
+		//     content: "";
+		//     position: absolute;
+		//     width: 100%;
+		//     height: 100%;
+		//     top: 0;
+		//     left: 0;
+		//     background-color: black;
+		//     opacity: 0.3;
 
-        @include medium {
-            background-position: 90% 45%;
-        }
+		// }
+	}
+
+	&__text {
+		position: absolute;
+		width: 50%;
+		top: 15%;
+		left: 0;
+
+		h1 {
+            font-size: 1.25rem;
+			font-weight: 600;
+			@include large {
+				font-size: 2.15rem;
+			}
+		}
+
+		p {
+            font-size: 1rem;
+			font-weight: 100;
+            margin: 0.5rem 0 0.5rem 0;
+
+			@include large {
+				font-size: 1.35rem;
+                margin: 1rem 0 1rem 0;
+			}
+		}
+	}
+
+    &__btn {
+        float: right;
     }
 }

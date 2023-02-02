@@ -1,8 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <div className='about'>About</div>
+    <motion.div className='about' initial={{width: 0}} animate={{width: "100%"}} exit={{x: window.innerWidth, transition: {duration: 0.1} }}>About</motion.div>
   )
 }
 

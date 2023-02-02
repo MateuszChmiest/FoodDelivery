@@ -1,20 +1,18 @@
-import { Route, Routes } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import Home from "./pages/Home";
-import Store from "./pages/Store";
-import About from "./pages/About";
 import Layout from "./components/Layout";
 import { CartProvider } from "./context/CartContext";
+import { Container } from "react-bootstrap";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 const App = () => {
+
+
+
 	return (
 		<CartProvider>
 			<Layout>
-					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/store' element={<Store />} />
-						<Route path='/about' element={<About />} />
-					</Routes>
+				<Container>
+					<AnimatedRoutes/>
+				</Container>
 			</Layout>
 		</CartProvider>
 	);
