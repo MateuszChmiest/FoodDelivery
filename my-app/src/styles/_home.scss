@@ -1,12 +1,12 @@
 .home {
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 
 	&__banner {
 		width: 100%;
-		height: 250px;
+		height: 300px;
 		background-image: url("../assets/banner.jpeg");
 		background-size: cover;
 		background-position: center;
@@ -14,18 +14,18 @@
 		box-sizing: content-box;
 		margin-bottom: 1rem;
 		position: relative;
-        -webkit-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
-        -moz-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
-        box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
+		-webkit-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
+		-moz-box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
+		box-shadow: inset -7px -6px 22px 9px rgba(255, 255, 255, 1);
 
 		@include medium {
 			height: 300px;
 			background-position: bottom;
 		}
 
-        @include large {
-            height: 400px;
-        }
+		@include large {
+			height: 400px;
+		}
 
 		// &::after {
 		//     content: "";
@@ -42,14 +42,25 @@
 
 	&__text {
 		position: absolute;
-		width: 50%;
+		width: 60%;
 		top: 15%;
 		left: 0;
 
+		@include medium {
+			width: 50%;
+		}
+
 		h1 {
-            color: $color-secondary;
-            font-size: 1.25rem;
+			color: $color-secondary;
+			font-size: 1.2rem;
 			font-weight: 600;
+			text-shadow: -1px 1px 1px rgba(171, 171, 171, 1);
+
+
+
+			@include medium{
+				font-size: 1.75rem;
+			}
 
 			@include large {
 				font-size: 2.15rem;
@@ -57,32 +68,35 @@
 		}
 
 		p {
-            color: $color-gray;
-            font-size: 0.75rem;
+			color: $color-black;
+			font-size: 0.7rem;
 			font-weight: 100;
-            margin: 0.5rem 0 0.5rem 0;
+			margin: 0.5rem 0 0.5rem 0;
+			line-height: 0.875rem;
 
-            @include medium {
-                font-size: 1rem;
-            }
+			@include medium {
+				font-size: 1rem;
+				line-height: 1.25rem;
+			}
 
 			@include large {
 				font-size: 1.35rem;
-                margin: 1rem 0 1rem 0;
+				margin: 1rem 0 1rem 0;
+				line-height: 1.5rem;
 			}
 		}
 	}
 
-    &__btn {
-        font-size: 0.55rem;
+	&__btn {
+		font-size: 1rem;
 
-        @include medium {
-            font-size: 0.75rem;
-            float: right;
-        }
+		@include medium {
+			font-size: 0.75rem;
+			float: right;
+		}
 
-        @include large {
-            font-size: 1.15rem;
-        }
-    }
+		@include large {
+			font-size: 1.15rem;
+		}
+	}
 }

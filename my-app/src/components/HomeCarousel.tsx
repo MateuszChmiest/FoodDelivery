@@ -12,7 +12,7 @@ import togos from "../assets/togos.png";
 const HomeCarousel = () => {
 	return (
 		<div>
-			<p className="title">OUR PARTNERS</p>
+			<p className="title">- OUR PARTNERS -</p>
 			<div className='carousel'>
 				<div className='carousel__slider'>
 					<div className='carousel__track'>

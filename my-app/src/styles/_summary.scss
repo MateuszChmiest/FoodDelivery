@@ -1,0 +1,30 @@
+.summary {
+    width: 100%;
+	min-height: 100vh;
+	margin: 9rem 0 3rem 0;
+
+    &__cart {
+        border: 2px solid $color-gray;
+        background-color: lightgray;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    &__address {
+        border: 2px solid $color-gray;
+        background-color: lightgray;
+        border-radius: 0.5rem;
+        padding: 1rem;
+    }
+
+    &__back {
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 250ms;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            color:$color-primary;
+        }
+    }
+}

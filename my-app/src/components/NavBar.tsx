@@ -63,13 +63,13 @@ const NavBar = () => {
 								"nav__mobileMenu--active": nav,
 							})}>
 							<button className="nav__mobileMenu--close" onClick={() => setNav(!nav)}><AiOutlineClose size="1.25em"/></button>
-							<Link to={"/"} className='nav__mobileMenu--link'>
+							<Link to={"/"} onClick={() => setNav(!nav)} className='nav__mobileMenu--link'>
 								Home
 							</Link>
-							<Link to={"/store"} className='nav__mobileMenu--link'>
+							<Link to={"/store"} onClick={() => setNav(!nav)} className='nav__mobileMenu--link'>
 								Store
 							</Link>
-							<Link to={"/about"} className='nav__mobileMenu--link'>
+							<Link to={"/about"} onClick={() => setNav(!nav)} className='nav__mobileMenu--link'>
 								About Us
 							</Link>
 							<img src={logo} alt="logo" className="nav__mobileMenu--logo"/>

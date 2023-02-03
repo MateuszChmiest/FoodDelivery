@@ -1,5 +1,5 @@
 import React from "react";
-import { Offcanvas, Stack } from "react-bootstrap";
+import { Button, Offcanvas, Stack } from "react-bootstrap";
 import { useCartContext } from "../context/CartContext";
 import CartItem from "./CartItem";
 import { CgSmileSad } from "react-icons/cg";
@@ -25,16 +25,19 @@ const ShoppingCart = () => {
 					))}
 
 					{cartItems.length === 0 ? null : (
-						<div className='ms-auto fw-bold fs-6 mt-4'>
-							Total price:{" "}
-							{formatCurrency(
-								cartItems.reduce((total, cartItem) => {
-									const item = products.find((i) => i.id === cartItem.id);
+						<>
+							<div className='ms-auto fw-bold fs-6 mt-4'>
+								Total price:{" "}
+								{formatCurrency(
+									cartItems.reduce((total, cartItem) => {
+										const item = products.find((i) => i.id === cartItem.id);
 
-									return total + (item?.price || 0) * cartItem.quantity;
-								}, 0)
-							)}
-						</div>
+										return total + (item?.price || 0) * cartItem.quantity;
+									}, 0)
+								)}
+							</div>
+							<Button variant='danger'>Submit</Button>
+						</>
 					)}
 				</Stack>
 			</Offcanvas.Body>

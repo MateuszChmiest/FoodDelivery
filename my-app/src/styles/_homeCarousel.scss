@@ -14,14 +14,18 @@
 
     &__track {
         position: relative;
-        -webkit-animation: scroll 25s linear infinite;
-        animation: scroll 25s linear infinite;
+        -webkit-animation: scroll 30s linear infinite;
+        animation: scroll 30s linear infinite;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: calc(160px * 10);
+        width: calc(130px * 10);
 
         @include medium {
+            width: calc(180px * 10);
+        }
+
+        @include large {
             width: calc(250px * 10);
         }
 
@@ -35,8 +39,13 @@
         width: 15.625rem;
 
         img {
-            width: 110px;
-            height: 80px;
+            width: 80px;
+            height: 50px;
+
+            @include large {
+                width: 100px;
+                height: 70px;
+            }
         }
     }
 }
@@ -65,4 +74,6 @@
     text-align: center;
     margin: 1rem 0 1rem 0;
     color: $color-primary;
+    text-shadow: -1px 2px 1px rgba(171, 171, 171, 1);
+
 }
