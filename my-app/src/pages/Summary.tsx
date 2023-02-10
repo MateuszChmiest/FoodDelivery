@@ -2,23 +2,26 @@ import React from "react";
 import { Button, Col, Container, Form, Row, Stack } from "react-bootstrap";
 import CartItem from "../components/CartItem";
 import { useCartContext } from "../context/CartContext";
-import { BsFillArrowLeftSquareFill } from "react-icons/bs"
+import { BsFillArrowLeftSquareFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 const Summary = () => {
-
-    const { cartItems } = useCartContext();
-    const navigate = useNavigate();
+	const { cartItems, cartQuantity } = useCartContext();
+	const navigate = useNavigate();
 
 	return (
 		<Container>
 			<div className='summary'>
-                <div className="summary__back">
-                    <p onClick={() => navigate("/store") }><BsFillArrowLeftSquareFill size={19} color={'#f9b041'}/> Continue shopping</p>
-                </div>
-				<Row xs={1} md={2}>
-					<Col md={8} className="summary__address">
-						<Form>
+				<div className='summary__back'>
+					<p onClick={() => navigate("/store")}>
+						<BsFillArrowLeftSquareFill size={19} color={"#f9b041"} /> Continue
+						shopping
+					</p>
+				</div>
+				<Row xs={1} className='d-flex flex-column-reverse flex-lg-row'>
+					<Col lg={7} xl={8}>
+						<h2 className='summary__billing'>Billing address</h2>
+						<Form className='summary__address'>
 							<Row className='mb-3'>
 								<Form.Group as={Col}>
 									<Form.Label>First Name</Form.Label>
@@ -53,20 +56,24 @@ const Summary = () => {
 								</Form.Group>
 							</Row>
 
-							<Button variant='danger' type='submit'>
-								Submit
+							<Button variant='danger' type='submit' size='lg'>
+								Submit Order
 							</Button>
 						</Form>
 					</Col>
-					<Col md={4}>
-                        <div className="summary__cart">
-                            <Stack gap={2}>
-                                {cartItems.map((item) => (
-                                    <CartItem key={item.id} {...item}/>
-                                ))}
-                            </Stack>
-                        </div>
-                    </Col>
+					<Col lg={5} xl={4}>
+						<div className='summary__quantity'>
+							<h2>Your cart</h2>
+							<span>{cartQuantity}</span>
+						</div>
+						<div className='summary__cart'>
+							<Stack gap={2}>
+								{cartItems.map((item) => (
+									<CartItem key={item.id} {...item} />
+								))}
+							</Stack>
+						</div>
+					</Col>
 				</Row>
 			</div>
 		</Container>

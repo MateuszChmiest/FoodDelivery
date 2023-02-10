@@ -1,6 +1,5 @@
 .summary {
-    width: 100%;
-	min-height: 100vh;
+    min-height: 100vh;
 	margin: 9rem 0 3rem 0;
 
     &__cart {
@@ -8,11 +7,15 @@
         background-color: lightgray;
         border-radius: 0.5rem;
         padding: 1rem;
+        margin-bottom: 1rem;
+
+        @include large {
+            margin-bottom: 0;
+        }
     }
 
     &__address {
         border: 2px solid $color-gray;
-        background-color: lightgray;
         border-radius: 0.5rem;
         padding: 1rem;
     }
@@ -26,5 +29,37 @@
         &:hover {
             color:$color-primary;
         }
+    }
+
+    &__quantity {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0.5rem 0 0.5rem;
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+        }
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            color: white;
+            width: 2rem;
+            height: 1.5rem;
+            background-color: $color-primary;
+            border-radius: 1rem;
+            margin-bottom: 0.75rem;
+        }
+    }
+
+    &__billing {
+        font-size: 1.75rem;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
     }
 }
