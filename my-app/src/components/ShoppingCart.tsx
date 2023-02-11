@@ -52,7 +52,7 @@ const ShoppingCart = () => {
 								)}
 							</div>
 							<Button variant='danger' onClick={handleSubmit} disabled={isLoading}>
-								{isLoading ? "Loading.." : "Summary"}
+								{isLoading ? "Loading.." : "Go to checkout"}
 							</Button>
 						</>
 					)}

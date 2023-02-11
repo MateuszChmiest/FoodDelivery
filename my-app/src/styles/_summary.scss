@@ -3,20 +3,20 @@
 	margin: 9rem 0 3rem 0;
 
     &__cart {
-        border: 2px solid $color-gray;
-        background-color: lightgray;
-        border-radius: 0.5rem;
+        border: 2px solid $color-secondary;
+        background-color: lightyellow;
+        border-radius: 0.35rem;
         padding: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
 
-        @include large {
+        @include xlarge {
             margin-bottom: 0;
         }
     }
 
     &__address {
-        border: 2px solid $color-gray;
-        border-radius: 0.5rem;
+        border: 2px solid $color-secondary;
+        border-radius: 0.35rem;
         padding: 1rem;
     }
 
