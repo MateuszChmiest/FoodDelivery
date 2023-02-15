@@ -100,7 +100,7 @@ const Summary = () => {
 							<Row className='mb-4'>
 								<Form.Group as={Col}>
 									<Form.Label>Expiration</Form.Label>
-									<Form.Control placeholder="00/0000"/>
+									<Form.Control placeholder="00 / 0000"/>
 								</Form.Group>
 								<Form.Group as={Col}>
 									<Form.Label>CVV</Form.Label>
